@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SeductionX - Discreet Adult Services Platform</title>
+    <meta name="description" content="SeductionX is a secure e-commerce platform connecting you with discreet, professional adult services." />
+    <meta name="keywords" content="adult services, discreet, secure payment, profiles, reviews, safety tips" />
+    <meta name="author" content="SeductionX Team" />
+
+    <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <!--Replace with your tailwind.css once created-->
+    <link
+      href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
+      rel="stylesheet"
+    />
+    <!--Tailwind Custom Forms - use to standardise form fields-->
+
+    <style>
+      @import url("https://rsms.me/inter/inter.css");
+      html {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+          "Noto Color Emoji";
+      }
+
+      .gradient {
+        background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+      }
+      
+      button,
+      .gradient2 {
+        background-color: #f39f86;
+        background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+      }
+      
+      /* Browser mockup code */
+      .browser-mockup {
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        position: relative;
+        height: 60vh;
+      }
+
+      .browser-mockup > * {
+        display: block;
+      }
+      
+      /* Custom CSS for image sizing */
+      .hero-img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+      }
+      
+      .service-img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+      }
+      
+      .gallery-img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+      }
+      
+      .gallery-figure {
+        margin: 1rem;
+      }
+      
+      /* Additional spacing adjustments */
+    </style>
+    
+    <!-- N8n chat
+      <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+      <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+          webhookUrl: process.env.WEBHOOK_URL
+        });
+      </script>  
+    -->
+  </head>
+
+  <body class="gradient leading-relaxed tracking-wide flex flex-col">
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6"
+      >
+        <div class="pl-4 flex items-center">
+          <a
+            class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#"
+          >
+            <svg
+              class="h-6 w-6 inline-block fill-current text-yellow-700"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+            </svg>
+            SeductionX
+          </a>
+        </div>
+
+        <div class="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-black font-bold no-underline"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#services"
+                >Services</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#reviews"
+                >Reviews</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#safety"
+                >Safety Tips</a
+              >
+            </li>
+          </ul>
+          <button
+            id="navAction"
+            class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75"
+          >
+            Secure Payment
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto h-screen pt-12">
+      <div class="text-center px-3 lg:px-0">
+        <h1
+          class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight text-gray-900"
+        >
+          Discover Discreet Adult Services
+        </h1>
+        <p
+          class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8"
+        >
+          Explore a curated selection of professional adult experiences. Our platform protects your privacy and ensures secure transactions.
+        </p>
+
+        <button
+          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48"
+        >
+          Sign Up
+        </button>
+        <a
+          href="#services"
+          class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8"
+          >Learn More</a
+        >
+      </div>
+
+      <div class="flex items-center w-full mx-auto content-end">
+        <img
+          class="hero-img flex flex-1 m-6 md:px-0 md:m-12 bg-white w-11/12 rounded shadow-xl"
+          src="https://images.unsplash.com/photo-1590175873438-c55c72f73f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwxfHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+          alt="Red Light District (De Wallen) at Night"
+        />
+      </div>
+    </div>
+
+    <!-- Featured Services Section -->
+    <section id="services" class="bg-white border-b py-12">
+      <div class="container mx-auto px-4">
+        <h2
+          class="w-full my-2 text-4xl font-black leading-tight text-center text-gray-800 lg:mt-8"
+        >
+          Featured Services
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+        <div class="flex flex-wrap -mx-2">
+          <!-- Service Card 1 -->
+          <div class="w-full md:w-1/3 px-2 mb-4">
+            <div class="bg-gray-100 rounded overflow-hidden shadow">
+              <img
+                class="service-img"
+                src="https://images.unsplash.com/photo-1590175873761-c67bf2ecf3f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwyfHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+                alt="Red Light District (De Wallen) at Night"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2 text-gray-900">
+                  Discreet Companionship
+                </h3>
+                <p class="text-gray-700 text-base">
+                  Enjoy curated company with professionals who value privacy and discretion.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="w-full md:w-1/3 px-2 mb-4">
+            <div class="bg-gray-100 rounded overflow-hidden shadow">
+              <img
+                class="service-img"
+                src="https://images.unsplash.com/photo-1614332685257-cfd8d1b57046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwzfHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+                alt="Secret window"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2 text-gray-900">
+                  Intimate Experiences
+                </h3>
+                <p class="text-gray-700 text-base">
+                  Personalized sessions to cater to your desires in a fully secure environment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="w-full md:w-1/3 px-2 mb-4">
+            <div class="bg-gray-100 rounded overflow-hidden shadow">
+              <img
+                class="service-img"
+                src="https://images.unsplash.com/photo-1605114185253-e75dcfd393db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw0fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080"
+                alt="woman in black dress walking on sidewalk during night time"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2 text-gray-900">
+                  Exclusive Encounters
+                </h3>
+                <p class="text-gray-700 text-base">
+                  Experience luxury and passion with our premium service providers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-gray-100 border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2
+          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
+        >
+          Pricing & Packages
+        </h2>
+        <div class="w-full mb-4">
+          <div
+            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
+          ></div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+          <!-- Free Package -->
+          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Trial
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Basic Profile</li>
+                <li class="border-b py-4">Limited Access</li>
+                <li class="border-b py-4">No Booking Fee</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                £0 <span class="text-base">/ trial period</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Basic Package -->
+          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
+              <div class="w-full p-8 text-3xl font-bold text-center">Standard</div>
+              <ul class="w-full text-center text-base font-bold">
+                <li class="py-4">Verified Profiles</li>
+                <li class="py-4">More Service Options</li>
+                <li class="py-4">Secure Chat</li>
+                <li class="py-4">Secure Payment</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
+              <div class="w-full pt-6 text-4xl font-bold text-center">
+                £29.99 <span class="text-base">/ session</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pro Package -->
+          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-r-lg bg-white mt-4">
+            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+              <div class="p-8 text-3xl font-bold text-center border-b-4">
+                Premium
+              </div>
+              <ul class="w-full text-center text-sm">
+                <li class="border-b py-4">Exclusive Matches</li>
+                <li class="border-b py-4">Priority Booking</li>
+                <li class="border-b py-4">Full Access</li>
+              </ul>
+            </div>
+            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+                £79.99 <span class="text-base">/ session</span>
+              </div>
+              <div class="flex items-center justify-center">
+                <button
+                  class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews & Safety Tips Section -->
+    <section id="reviews" class="bg-white border-b py-8">
+      <div class="container mx-auto px-4">
+        <h2
+          class="w-full my-2 text-4xl font-black leading-tight text-center text-gray-800"
+        >
+          Customer Reviews & Safety Tips
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap -mx-2">
+          <div class="w-full md:w-1/2 px-2 mb-4">
+            <div class="bg-gray-50 p-6 rounded shadow">
+              <h3 class="text-2xl font-bold mb-2 text-gray-900">What Our Clients Say</h3>
+              <p class="text-gray-700 mb-4">
+                "SeductionX provides a discreet and seamless experience. The profiles are verified and the customer service is exceptional." 
+              </p>
+              <p class="text-gray-600"><strong>- A Satisfied Client</strong></p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 px-2 mb-4">
+            <div class="bg-gray-50 p-6 rounded shadow">
+              <h3 class="text-2xl font-bold mb-2 text-gray-900">Safety Tips</h3>
+              <p class="text-gray-700 mb-4">
+                Always confirm the identity and credentials of providers. Use our secure payment system and never share personal details until you’re confident. Your privacy is our utmost priority.
+              </p>
+              <p class="text-gray-600"><strong>- SeductionX Team</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section using provided images -->
+    <section class="bg-gray-100 py-8">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h2
+          class="w-full my-2 text-4xl font-black leading-tight text-center text-gray-800"
+        >
+          In Situ Gallery
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1590175873438-c55c72f73f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwxfHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Red Light District (De Wallen) at Night">
+            <figcaption class="text-center text-sm mt-2">Red Light District at Night</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1590175873761-c67bf2ecf3f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwyfHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Red Light District (De Wallen) at Night">
+            <figcaption class="text-center text-sm mt-2">Red Light District at Night</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1614332685257-cfd8d1b57046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwzfHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Secret window">
+            <figcaption class="text-center text-sm mt-2">Secret Window</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1605114185253-e75dcfd393db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw0fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="woman in black dress walking on sidewalk during night time">
+            <figcaption class="text-center text-sm mt-2">Elegant Evening Walk</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1627224399635-04b73da49323?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw1fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="woman in black and white plaid shirt and blue denim jeans sitting on black metal pole">
+            <figcaption class="text-center text-sm mt-2">Urban Allure</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1560800589-3d88290dd749?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw2fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="girl in car">
+            <figcaption class="text-center text-sm mt-2">Confident Journey</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1676478966485-c5f896117635?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw3fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="A mannequin models lingerie in a store window along Vancouver's Davie St">
+            <figcaption class="text-center text-sm mt-2">Daring Display</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1560716093-e8cc21e8504d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw4fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Daria in car">
+            <figcaption class="text-center text-sm mt-2">Chic & Bold</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1656152308981-d0a43ece2f54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHw5fHxwcm9zdGl0dXRpb258ZW58MHx8fHwxNzQ1ODk0MTgwfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Work in progress image">
+            <figcaption class="text-center text-sm mt-2">Creative Passion</figcaption>
+          </figure>
+          <figure class="gallery-figure">
+            <img class="gallery-img rounded shadow" src="https://images.unsplash.com/photo-1656152308801-32d9238b3da1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MzQ0MzV8MHwxfHNlYXJjaHwxMHx8cHJvc3RpdHV0aW9ufGVufDB8fHx8MTc0NTg5NDE4MHww&ixlib=rb-4.0.3&q=80&w=1080" alt="Donation appeal image">
+            <figcaption class="text-center text-sm mt-2">Support the Art</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="gradient w-full mx-auto text-center pt-6 pb-12">
+      <h2
+        class="w-full my-2 text-5xl font-black leading-tight text-center text-white"
+      >
+        Ready to Experience Discretion?
+      </h2>
+      <div class="w-full mb-4">
+        <div
+          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+        ></div>
+      </div>
+
+      <h3 class="my-4 text-3xl font-extrabold text-white">
+        Join SeductionX today and unlock exclusive experiences.
+      </h3>
+
+      <button
+        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg"
+      >
+        Get Started Now
+      </button>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-white ">
+      <div class="container mx-auto mt-8 px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6">
+            <a
+              class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+              href="#"
+            >
+              <svg
+                class="h-6 w-6 inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+              </svg>
+              SeductionX
+            </a>
+          </div>
+
+          <div class="flex-1">
+            <p class="uppercase font-extrabold text-gray-500 md:mb-6">Links</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >FAQ</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Help</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase font-extrabold text-gray-500 md:mb-6">Legal</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Terms</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Privacy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase font-extrabold text-gray-500 md:mb-6">Social</p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Linkedin</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <p class="uppercase font-extrabold text-gray-500 md:mb-6">
+              Company
+            </p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Official Blog</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >About Us</a
+                >
+              </li>
+              <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                <a
+                  href="#"
+                  class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
